@@ -1,0 +1,17 @@
+# Sobe um PostgreSQL local para desenvolvimento e testes: docker compose up -d
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: busfield-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: busfield
+      POSTGRES_PASSWORD: busfield
+      POSTGRES_DB: busfield_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - busfield_pgdata:/var/lib/postgresql/data
+      - ./docker/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+volumes:
+  busfield_pgdata:

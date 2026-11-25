@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "BusField Pass",
+    "slug": "busfield-pass",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B3D91"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.edu.busfield.pass"
+    },
+    "android": {
+      "package": "br.edu.busfield.pass",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B3D91",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-asset",
+      "expo-font"
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}
